@@ -1,18 +1,20 @@
-import { Avatar, Fade, Grid, Hidden, makeStyles, Tooltip, Typography, useMediaQuery, useTheme, Zoom } from "@material-ui/core";
+import { Avatar, Fade, Grid, Hidden, Tooltip, Typography, useMediaQuery, useTheme, Zoom } from "@mui/material";
+import { makeStyles} from "@mui/styles";
+import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
 import ReactTyped from "react-typed";
 import clsx from "clsx";
 import Image from 'next/image'
-import simpleIcons from 'simple-icons'
 import data from '../data.json'
-import { iconify } from "./util";
-import Cancel from "@material-ui/icons/Cancel";
+import Cancel from "@mui/icons-material/Cancel";
 const { landing } = data
 
 const professionalDetails = landing.professionalDetails.map(({ alt, icon, link }) => {
-    const ic = simpleIcons.get(iconify(icon)) || {
+    const ic = dynamic(() => import('simple-icons/icons').then((mod) => mod[icon]), {Suspense: false})  || {
         hex: '424242',
         component: <Cancel color="white" fontSize={36} />
     }
+    console.log(ic)
     return {
         alt,
         backgroundColor: '#' + ic.hex,
@@ -31,7 +33,7 @@ professionalDetails.forEach(({ alt, backgroundColor }) => {
 
 const useStyles = makeStyles(theme => ({
     cont: {
-        minHeight: `calc(100vh - ${theme.spacing(4)}px)`,
+        minHeight: `calc(100vh - ${theme.spacing(4)})`,
         paddingBottom: theme.spacing(10)
     },
     subtitle: {
@@ -91,6 +93,7 @@ export default function Landing() {
                     <Grid item lg={6}>
                         <Image
                             src="/landing.svg"
+                            priority="true"
                             alt="Landing"
                             width="900.94"
                             height="787"

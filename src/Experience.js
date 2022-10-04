@@ -1,6 +1,7 @@
-import { Avatar, Card, CardActionArea, CardHeader, Fade, Grid, Hidden, makeStyles, Typography, useMediaQuery, useTheme } from "@material-ui/core";
+import { Avatar, Card, CardActionArea, CardHeader, Fade, Grid, Hidden, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import Image from 'next/image'
-import { DateRange, LocationCity } from '@material-ui/icons';
+import { DateRange, LocationCity } from '@mui/icons-material';
 import data from '../data.json'
 import { useRef } from "react";
 import useAnimate from "./useAnimate";
@@ -8,7 +9,7 @@ const { experience } = data
 
 const useStyles = makeStyles(theme => ({
     cont: {
-        minHeight: `calc(100vh - ${theme.spacing(4)}px)`,
+        minHeight: `calc(100vh - ${theme.spacing(4)})`,
     },
     card: {
         height: '100%',
@@ -62,7 +63,7 @@ export default function Experience() {
     const align = mdDown ? "center" : "flex-end"
     const textAlign = mdDown ? "center" : "right"
 
-    const animRef = useRef(null)
+    const animRef = useRef()
     const animate = useAnimate(animRef)
 
     return (

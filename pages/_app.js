@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
-import { MuiThemeProvider, useMediaQuery, CssBaseline } from '@material-ui/core';
+import { ThemeProvider, useMediaQuery, CssBaseline, } from '@mui/material';
 import { darkTheme, lightTheme } from '../src/theme';
 
 export default function MyApp({ Component, pageProps }) {
@@ -29,10 +29,10 @@ export default function MyApp({ Component, pageProps }) {
         <title>Kaustubh Odak</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
-      <MuiThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} setTheme={setTheme}/>
-      </MuiThemeProvider>
+      </ThemeProvider>
     </React.Fragment>
   );
 }

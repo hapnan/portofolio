@@ -1,16 +1,20 @@
-import { Avatar, Fade, Grid, Hidden, makeStyles, Tooltip, Typography, useMediaQuery, useTheme, Zoom } from "@material-ui/core";
-import Cancel from "@material-ui/icons/Cancel";
+import { Avatar, Fade, Grid, Hidden, Tooltip, Typography, useMediaQuery, useTheme, Zoom } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+import dynamic from 'next/dynamic'
+import { Suspense, useEffect } from 'react'
+import Cancel from "@mui/icons-material/Cancel";
 import clsx from "clsx";
 import Image from 'next/image'
 import { useRef} from "react";
-import simpleIcons from 'simple-icons'
+import * as icons from "simple-icons/icons"
 import data from '../data.json'
 import useAnimate from "./useAnimate";
 import { iconify } from "./util";
 const { skills } = data
 
+
 const wrapper = (sk = []) => sk.map(v => {
-    const ic = simpleIcons.get(typeof v === "string" ? iconify(v) : iconify(v.icon)) || {
+    const ic = dynamic(() => import('simple-icons/icons').then((mod) => mod[v.icon]), {suspense: true}) || {
         title: v,
         hex: '424242',
         component: <Cancel />
@@ -39,7 +43,7 @@ Object.values(wrappedSkills).forEach(oarr => {
 
 const useStyles = makeStyles(theme => ({
     cont: {
-        minHeight: `calc(100vh - ${theme.spacing(4)}px)`,
+        minHeight: `calc(100vh - ${theme.spacing(4)})`,
     },
     skobj: {
         marginBottom: theme.spacing(4)
@@ -60,12 +64,12 @@ export default function Skills() {
     const align = mdDown ? "center" : "flex-end"
     const textAlign = mdDown ? "center" : "right"
 
-    const animRef = useRef(null)
-    const animate = useAnimate(animRef)
+    const animref = useRef(null)
+    const animate = useAnimate(animref)
 
     return (
         <Grid container justify="center" alignItems="center" spacing={10} className={classes.cont}>
-            <Grid item xs={12} lg={6} ref={animRef}>
+            <Grid item xs={12} lg={6} ref={animref}>
                 <Typography variant="h2" gutterBottom align="center">
                     Skills
                 </Typography>

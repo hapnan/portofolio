@@ -1,33 +1,28 @@
 {
-    "name": "Kaustubh Odak",
+    "name": "Hapnan Arsad Riski",
     "landing": {
-        "title": "Hi, I'm Kaustubh",
+        "title": "Hi, I'm Hapnan",
         "subtitles": [
-            "Full-stack developer 🌐",
+            "Back-End Developer 🌐",
             "Cross-platform developer 📱💻",
             "Exploring cloud ☁️",
-            "Beginner in devops ♾️",
+            "Im Still Beginner ♾️",
             "Just getting started 📈"
         ],
         "professionalDetails": [
             {
                 "alt": "kaustubh-odak",
-                "icon": "linkedin",
-                "link": "https://www.linkedin.com/in/kaustubh-odak/"
+                "icon": "siLinkedin",
+                "link": "https://www.linkedin.com/in/hapnan-arsad/"
             },
             {
-                "alt": "kausko",
-                "icon": "stackoverflow",
-                "link": "https://stackoverflow.com/users/15832433/kausko"
-            },
-            {
-                "alt": "kausko",
-                "icon": "github",
-                "link": "https://github.com/kausko"
+                "alt": "Hapnan",
+                "icon": "siGithub",
+                "link": "https://github.com/hapnan"
             },
             {
                 "alt": "Email",
-                "icon": "gmail",
+                "icon": "siGmail",
                 "link": "mailto:iam@kaustubhodak.me,kaustubhodak1@gmail.com"
             }
         ]
@@ -35,113 +30,49 @@
     "skills": {
         "Languages known": [
             "JavaScript",
-            "Java",
-            "C++",
-            "Python",
             "HTML5",
             "CSS3",
-            "TypeScript",
-            "Kotlin",
-            "Dart"
+            "PHP"
         ],
         "Frontend": [
             "React",
-            "Redux",
             "Next.js",
-            "Gatsby",
-            "Netlify",
-            "Vercel",
             "Material-UI",
-            "antdesign",
             "Bootstrap"
         ],
         "Backend, Database and Cloud": [
             "Node.js",
             "Express",
-            "FastAPI",
             "MongoDB",
             "MySQL",
             "PostgreSQL",
-            {
-                "alt": "Azure",
-                "icon": "microsoftazure"
-            },
-            "Heroku",
             "Firebase"
         ],
         "Mobile": [
-            {
-                "alt": "React_Native",
-                "icon": "react",
-                "backgroundColor": "#424242"
-            },
-            "Expo",
-            "Android",
-            "Flutter"
+            "Android"
         ]
     },
     "projects": {
         "baseURI": "https://api.github.com/repos/kausko/",
         "repositories": [
-            "Genrealize",
-            "Portfolio",
-            "cosmicom",
-            "Discord-Google-Drive-Bot",
-            "GitHits",
-            "1DBM"
         ]
     },
     "experience": {
         "Work Experience": [
-            {
-                "organization": "CloudDFN LLP",
-                "role": "Full Stack Developer",
-                "type": "Internship",
-                "startDate": "2020-07-20",
-                "endDate": "2021-01-20",
-                "city": "Mumbai",
-                "state": "Maharashtra",
-                "country": "India",
-                "url": "https://www.linkedin.com/company/clouddfn-llp/",
-                "thumbnail": "/CDFN.jfif"
-            },
-            {
-                "organization": "NonceBlox Pvt. Ltd.",
-                "role": "Full Stack Developer",
-                "type": "Internship",
-                "startDate": "2021-07-01",
-                "endDate": "2021-10-01",
-                "city": "New Delhi",
-                "state": "Delhi",
-                "country": "India",
-                "url": "https://www.linkedin.com/company/clouddfn-llp/",
-                "thumbnail": "https://media-exp1.licdn.com/dms/image/C510BAQFlYpD4CBqdNg/company-logo_200_200/0/1519500564654?e=1645056000&v=beta&t=zNmk6RfkUEj3vPWJ4cFEBvtIPdv5vOnBlgeSvMhnTa4"
-            }
+            
         ],
         "Volunteer Experience": [
             {
-                "organization": "PICT IEEE Student Branch (PISB)",
-                "role": "Technical Head",
+                "organization": "Dian Nuswantoro Computer Club (DNCC)",
+                "role": "Multemedia",
                 "type": "Member",
-                "startDate": "2019-07-01",
-                "endDate": "",
-                "city": "Pune",
-                "state": "Maharashtra",
-                "country": "India",
-                "url": "https://www.linkedin.com/company/pisbieee/",
+                "startDate": "2017-10-10",
+                "endDate": "2020-10-10",
+                "city": "Rembang",
+                "state": "Jawa Tengah",
+                "country": "Indonesia",
+                "url": "http://dncc-semarang.dinus.ac.id/",
                 "thumbnail": "/PISB.jfif"
-            },
-            {
-                "organization": "Pictoreal",
-                "role": "Technical Head",
-                "type": "Member",
-                "startDate": "2019-07-01",
-                "endDate": "2021-04-01",
-                "city": "Pune",
-                "state": "Maharashtra",
-                "country": "India",
-                "url": "https://www.linkedin.com/company/pictoreal/",
-                "thumbnail": "/Picto.jfif"
             }
         ]
     },
@@ -150,18 +81,18 @@
         "picture": "/profile.jpg",
         "social": [
             {
-                "alt": "kaustubh._.o",
-                "icon": "instagram",
-                "link": "https://www.instagram.com/kaustubh._.o/"
+                "alt": "hapnanss",
+                "icon": "siInstagram",
+                "link": "https://www.instagram.com/hapnanss/"
             },
             {
-                "alt": "KO_272",
-                "icon": "twitter",
-                "link": "https://twitter.com/KO_272"
+                "alt": "HapnanAR",
+                "icon": "siTwitter",
+                "link": "https://twitter.com/hapnanar"
             },
             {
-                "alt": "kaustubh#4489",
-                "icon": "discord",
+                "alt": "HapnanAR#4489",
+                "icon": "siDiscord",
                 "link": "https://discord.com/"
             }
         ]
@@ -169,7 +100,7 @@
     "theme": {
         "light": {
             "palette": {
-                "type": "light",
+                "mode": "light",
                 "background": {
                     "paper": "#fff",
                     "default": "#fafafa"
@@ -178,7 +109,7 @@
         },
         "dark": {
             "palette": {
-                "type": "dark",
+                "mode": "dark",
                 "background": {
                     "paper": "#303030",
                     "default": "#212121"

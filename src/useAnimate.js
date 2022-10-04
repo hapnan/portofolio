@@ -14,7 +14,7 @@ export default function useAnimate(ref) {
   useEffect(() => {
     observerRef.current.observe(ref.current)
     return () => observerRef.current.disconnect()
-  }, [ref])
+  }, [ref.current])
 
   return animate
 }

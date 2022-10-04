@@ -1,4 +1,5 @@
-import { Card, CardActionArea, CardActions, CardContent, CardHeader, Chip, Fade, Grid, Hidden, makeStyles, Typography } from "@material-ui/core";
+import { Card, CardActionArea, CardActions, CardContent, CardHeader, Chip, Fade, Grid, Hidden, Typography } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import { RepoForkedIcon, RepoIcon, StarIcon } from '@primer/octicons-react';
 import Image from 'next/image'
 import { useRef } from "react";
@@ -6,7 +7,7 @@ import useAnimate from "./useAnimate";
 
 const useStyles = makeStyles(theme => ({
     cont: {
-        minHeight: `calc(100vh - ${theme.spacing(4)}px)`,
+        minHeight: `calc(100vh - ${theme.spacing(4)})`,
     },
     card: {
         height: '100%'
@@ -27,7 +28,7 @@ export default function Projects({ data }) {
     return (
         <Grid direction="row-reverse" container justify="center" alignItems="center" spacing={10} className={classes.cont}>
             <Grid item xs={12} lg={6}>
-                <Typography variant="h2" gutterBottom align="center" innerRef={animRef}>
+                <Typography variant="h2" gutterBottom align="center" ref={animRef}>
                     Projects
                 </Typography>
                 <Hidden mdDown>

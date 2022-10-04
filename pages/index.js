@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
-import { AppBar, Container, IconButton, makeStyles, Toolbar, Typography, useScrollTrigger, useTheme } from '@material-ui/core';
+import { AppBar, Container, IconButton, Toolbar, Typography, useScrollTrigger, useTheme } from '@mui/material';
+import { makeStyles } from "@mui/styles";
 import Landing from '../src/Landing';
 import Skills from '../src/Skills';
 import Projects from '../src/Projects';
@@ -7,7 +8,7 @@ import Experience from '../src/Experience';
 import About from '../src/About';
 import data from '../data.json';
 import { darkTheme, lightTheme } from '../src/theme';
-import { Brightness4, Brightness7 } from '@material-ui/icons';
+import { Brightness4, Brightness7 } from '@mui/icons-material';
 const { name, projects } = data
 
 const useStyles = makeStyles(theme => ({
@@ -57,7 +58,7 @@ export default function Index({ projects, setTheme }) {
   const theme = useTheme()
 
   const toggleTheme = useCallback(() => {
-    setTheme(theme => theme.palette.type === 'dark' ? lightTheme : darkTheme)
+    setTheme(theme => theme.palette.mode === 'dark' ? lightTheme : darkTheme)
   }, [setTheme])
 
   return (
