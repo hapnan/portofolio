@@ -78,8 +78,8 @@ export default function Experience() {
                             <Image
                                 alt="Experience"
                                 src="/experience.svg"
-                                width="996.46"
-                                height="828.18"
+                                width={996.46}
+                                height={828.18}
                             />
                         </div>
                     </Fade>

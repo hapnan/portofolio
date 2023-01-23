@@ -10,10 +10,11 @@ import Cancel from "@mui/icons-material/Cancel";
 const { landing } = data
 
 const professionalDetails = landing.professionalDetails.map(({ alt, icon, link }) => {
-    const ic = dynamic(() => import('simple-icons/icons').then((mod) => mod[icon]), {suspense: true, })  || {
+    const ic = dynamic(async () => await import('simple-icons/icons').then(mod[icon]), {suspense: true, })  || {
         hex: '424242',
         component: <Cancel color="white" fontSize={36} />
     }
+
     return {
         alt,
         backgroundColor: '#' + ic.hex,
@@ -94,8 +95,8 @@ export default function Landing() {
                             src="/landing.svg"
                             priority="true"
                             alt="Landing"
-                            width="900.94"
-                            height="787"
+                            width= {900.94}
+                            height= {787}
                         />
                     </Grid>
                 </Fade>
