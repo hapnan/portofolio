@@ -10,11 +10,10 @@ import Cancel from "@mui/icons-material/Cancel";
 const { landing } = data
 
 const professionalDetails = landing.professionalDetails.map(({ alt, icon, link }) => {
-    const ic = dynamic(() => import('simple-icons/icons').then((mod) => mod[icon]), {Suspense: false})  || {
+    const ic = dynamic(() => import('simple-icons/icons').then((mod) => mod[icon]), {suspense: true, })  || {
         hex: '424242',
         component: <Cancel color="white" fontSize={36} />
     }
-    console.log(ic)
     return {
         alt,
         backgroundColor: '#' + ic.hex,
