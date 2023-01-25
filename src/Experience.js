@@ -121,7 +121,7 @@ export default function Experience() {
                                                                     <Image
                                                                         alt={`${organization} logo`}
                                                                         src={thumbnail}
-                                                                        layout="fill"
+                                                                        fill="true"
                                                                     />
                                                                 </Avatar>
                                                             }

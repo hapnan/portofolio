@@ -69,7 +69,7 @@ export default function About() {
                         <Image
                             alt="Display Picture"
                             src={about.picture}
-                            layout="fill"
+                            fill="true"
                         />
                     </Avatar>
                 </Grid>

@@ -7,10 +7,11 @@ import clsx from "clsx";
 import Image from 'next/image'
 import data from '../data.json'
 import Cancel from "@mui/icons-material/Cancel";
+import * as images from 'simple-icons/icons'
 const { landing } = data
 
 const professionalDetails = landing.professionalDetails.map(({ alt, icon, link }) => {
-    const ic = dynamic(async () => await import('simple-icons/icons').then(mod[icon]), {suspense: true, })  || {
+    const ic = images[icon]  || {
         hex: '424242',
         component: <Cancel color="white" fontSize={36} />
     }

@@ -5,14 +5,14 @@ import Cancel from "@mui/icons-material/Cancel";
 import clsx from "clsx";
 import Image from 'next/image'
 import { useRef , Suspense, useEffect, useState} from "react";
-import icons from "simple-icons/icons"
+import * as icons from "simple-icons/icons"
 import data from '../data.json'
 import useAnimate from "./useAnimate";
 import { iconify } from "./util";
 const { skills } = data
 
-const wrapper = (sk = []) => sk.map(v => {
-    const ic = dynamic(async () => await import('simple-icons/icons').then(icons => icons[iconify(v)])) || {
+const wrapper = (sk = []) => skills["Backend, Database and Cloud"].map(v => {
+    const ic = icons["si"+v] || {
         title: v,
         hex: '424242',
         component: <Cancel />
