@@ -15,7 +15,7 @@
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-typed": "^1.2.0",
+    "react-typed": "^2.0.0",
     "sharp": "^0.32.0",
     "simple-icons": "^9.0.0",
     "webpack": "^5.74.0"
